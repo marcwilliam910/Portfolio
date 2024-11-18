@@ -12,7 +12,7 @@ const projects = [
     description:
       "A web-based platform for a high school, integrated with a custom waste segregation device to monitor real-time waste levels (Paper, Metal, Bottle) across different locations like the canteen and faculty. It includes a secure admin login, a dashboard for viewing waste levels, a Record Keeping page for tracking waste sales with data visualization, and PDF report generation for submission to DEPED. The platform also features a notification system with push notifications for admins and SMS alerts for selected staff via the Semaphore API, along with light and dark mode support for accessibility.",
     image: ecoSort1,
-    link: "https://ibanhs-yeso.com",
+    link: "https://drive.google.com/file/d/1aT3K_gO3lTS0i1nTGIZgOGJVBj9meMh9/view?usp=sharing",
     github: "",
     tech: ["React", "TypeScript", "Tailwind", "Firebase"],
   },

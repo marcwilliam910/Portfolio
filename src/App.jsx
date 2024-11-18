@@ -263,7 +263,7 @@ export default function App() {
 
             <button
               type="submit"
-              className="flex items-center self-center justify-center w-full py-2 mt-3 text-base text-white rounded-md bg-light-primary"
+              className="flex items-center self-center justify-center w-full py-2 mt-3 text-base text-white rounded-md bg-light-primary hover:bg-light-primary/70"
             >
               {loading ? (
                 <RiLoader2Line className="size-6 animate-spin" />
