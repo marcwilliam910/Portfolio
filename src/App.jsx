@@ -76,6 +76,7 @@ export default function App() {
   const [active, setActive] = useState("");
   const [showDescription, setShowDescription] = useState(false);
   const [projectInfo, setProjectInfo] = useState({});
+  const [showModal, setShowModal] = useState(false);
   const socialsRef = useRef(null);
   const mainRef = useRef(null);
   const navRef = useRef(null);
@@ -176,6 +177,16 @@ export default function App() {
 
   return (
     <>
+      {showModal && (
+        <div className="fixed inset-0 z-50 flex items-center justify-center px-4 bg-black bg-opacity-80">
+          <div className="relative flex items-center justify-center w-full max-w-md p-6 rounded-lg shadow-xl md:h-40 bg-light-card text-light-text">
+            <p className="text-sm font-semibold text-center md:text-lg">
+              To request my resume, please message me directly. I'll be happy to
+              send it to you!
+            </p>
+          </div>
+        </div>
+      )}
       {showDescription && (
         <Modal project={projectInfo} setShowDescription={setShowDescription} />
       )}
@@ -209,7 +220,16 @@ export default function App() {
             ))}
           </div>
 
-          <button className="flex items-center gap-2 px-3 py-1.5 transition duration-300 ease-in-out border rounded-md border-light-primary hover:bg-light-primary sm:px-3.5 sm:text-lg">
+          <button
+            className="flex items-center gap-2 px-3 py-1.5 transition duration-300 ease-in-out border rounded-md border-light-primary hover:bg-light-primary sm:px-3.5 sm:text-lg"
+            onClick={() => {
+              setShowModal(true);
+
+              setTimeout(() => {
+                setShowModal(false);
+              }, 5000);
+            }}
+          >
             <MdOutlineFileDownload />
             <p>Resume</p>
           </button>

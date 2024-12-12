@@ -4,6 +4,7 @@ import appleSphere1 from "../assets/AppleSphere/pic1.png";
 import ecoSort1 from "../assets/EcoSort/pic1.png";
 import hotel from "../assets/Hotel/hotel-management.png";
 import insecured from "../assets/inseCURED/insecured.png";
+import knwoledgeloop from "../assets/KnowledgeLoop/knowledgeloop.png";
 import {FiArrowUpRight} from "react-icons/fi";
 
 const projects = [
@@ -15,6 +16,15 @@ const projects = [
     link: "https://drive.google.com/file/d/1aT3K_gO3lTS0i1nTGIZgOGJVBj9meMh9/view?usp=sharing",
     github: "",
     tech: ["React", "TypeScript", "Tailwind", "Firebase"],
+  },
+  {
+    title: "KnowledgeLoop",
+    description:
+      "Built a user-friendly interface for a school project quiz application, offering features tailored to both administrators and users. The admin panel includes comprehensive CRUD options, making it easy to manage quizzes in subjects like Math, Science, and English. Users can participate in timed quizzes, creating a structured and interactive experience. After completing a quiz, users receive instant feedback with their scores and pass/fail status. The platform is crafted for accessibility and ensures smooth functionality across various devices.",
+    image: knwoledgeloop,
+    link: "https://drive.google.com/file/d/1vttbx_tyFL7n6IikhL7Vv5Xdgu1io0-5/view?usp=sharing",
+    github: "",
+    tech: ["React", "TypeScript", "Tailwind", "Django", "TanStack Query"],
   },
   {
     title: "AppleSphere",
