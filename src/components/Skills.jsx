@@ -2,7 +2,7 @@ import React from "react";
 import {FaReact, FaGitAlt} from "react-icons/fa";
 import {RiTailwindCssFill, RiFirebaseFill} from "react-icons/ri";
 import {BiLogoTypescript} from "react-icons/bi";
-import {SiMysql} from "react-icons/si";
+import {SiMysql, SiSupabase, SiExpress, SiNextdotjs} from "react-icons/si";
 
 const technologies = [
   {
@@ -25,10 +25,21 @@ const technologies = [
     icon: <RiFirebaseFill />,
     name: "Firebase",
   },
-
   {
     icon: <FaGitAlt />,
     name: "Git",
+  },
+  {
+    icon: <SiNextdotjs />,
+    name: "NextJS",
+  },
+  {
+    name: "ExpressJS",
+    icon: <SiExpress />,
+  },
+  {
+    name: "Supabase",
+    icon: <SiSupabase />,
   },
 ];
 

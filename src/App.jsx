@@ -201,7 +201,7 @@ export default function App() {
             <span className="font-medium"> Marc William Valiente</span>
           </p>
           <h1 className="text-2xl font-extrabold tracking-wider text-center sm:text-4xl text-light-primaryText font-title lg:text-3xl xl:text-4xl">
-            A Front-End Developer
+            A Full-Stack Web Developer
           </h1>
           <div
             className="flex items-center justify-around gap-2 my-3"
