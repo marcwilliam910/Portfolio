@@ -7,7 +7,7 @@ export default function () {
       <h2 className="text-xl font-bold text-light-primaryText sm:text-2xl">
         About Me
       </h2>
-      <p className="text-justify indent-6 sm:px-4 md:px-8">
+      <p className="text-sm text-justify indent-6 sm:px-4 md:px-8 md:text-base">
         Fresh graduate with a degree in BSIT and a passion for full-stack
         development. Committed to continuous learning and skill enhancement.
         Eager to apply my evolving expertise to create impactful user

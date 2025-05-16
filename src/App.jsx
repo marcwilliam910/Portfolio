@@ -1,5 +1,11 @@
 import React, {useEffect, useRef, useState} from "react";
-import {MdMailOutline, MdMail, MdOutlineFileDownload} from "react-icons/md";
+import {
+  MdMailOutline,
+  MdMail,
+  MdOutlineFileDownload,
+  MdWorkOutline,
+  MdWork,
+} from "react-icons/md";
 import {GoHome, GoHomeFill} from "react-icons/go";
 import {RiUser3Line, RiUser3Fill} from "react-icons/ri";
 import {FaRegFolderOpen, FaFolderOpen, FaCode} from "react-icons/fa";
@@ -18,7 +24,7 @@ import {IoMdCheckmark} from "react-icons/io";
 import {RiLoader2Line} from "react-icons/ri";
 import {BiErrorAlt} from "react-icons/bi";
 import Modal from "./components/Modal";
-
+import Experiences from "./components/Experiences";
 const socialsStyle = "sm:size-5 lg:size-6";
 
 const navItems = [
@@ -33,6 +39,12 @@ const navItems = [
     name: "About",
     outlined: <RiUser3Line />,
     filled: <RiUser3Fill />,
+  },
+  {
+    id: "Experiences",
+    name: "Experiences",
+    outlined: <MdWorkOutline />,
+    filled: <MdWork />,
   },
   {
     id: "Technologies",
@@ -113,62 +125,62 @@ export default function App() {
     };
   }, []);
 
-  useGSAP(() => {
-    const main = mainRef.current;
-    const socialIcons = socialsRef.current.children;
-    const nav = navRef.current.children;
-    const mainContent = mainContentRef.current.children;
+  // useGSAP(() => {
+  //   const main = mainRef.current;
+  //   const socialIcons = socialsRef.current.children;
+  //   const nav = navRef.current.children;
+  //   const mainContent = mainContentRef.current.children;
 
-    gsap.set([main.children, socialIcons, nav], {autoAlpha: 0, y: 50});
-    gsap.set(mainContent, {
-      x: 100,
-      opacity: 0,
-    });
+  //   gsap.set([main.children, socialIcons, nav], {autoAlpha: 0, y: 50});
+  //   gsap.set(mainContent, {
+  //     x: 100,
+  //     opacity: 0,
+  //   });
 
-    const tl = gsap.timeline({defaults: {ease: "power3.out"}});
+  //   const tl = gsap.timeline({defaults: {ease: "power3.out"}});
 
-    tl.to(main.children, {
-      autoAlpha: 1,
-      y: 0,
-      duration: 0.8,
-      stagger: 0.2,
-      delay: 1,
-    })
-      .to(
-        socialIcons,
-        {
-          autoAlpha: 1,
-          y: 0,
-          duration: 0.5,
-          stagger: 0.1,
-        },
-        "-=0.5"
-      )
-      .from("button", {
-        scale: 0.8,
-        duration: 0.5,
-        ease: "back.out(1.7)",
-      })
-      .to(
-        nav,
-        {
-          autoAlpha: 1,
-          y: 0,
-          duration: 1,
-          ease: "bounce",
-        },
-        "-=0.3"
-      )
-      .to(mainContent, {
-        x: 0,
-        opacity: 1,
-        duration: 1,
-        stagger: {
-          amount: 0.5,
-          ease: "power2.out",
-        },
-      });
-  }, []);
+  //   tl.to(main.children, {
+  //     autoAlpha: 1,
+  //     y: 0,
+  //     duration: 0.8,
+  //     stagger: 0.2,
+  //     delay: 1,
+  //   })
+  //     .to(
+  //       socialIcons,
+  //       {
+  //         autoAlpha: 1,
+  //         y: 0,
+  //         duration: 0.5,
+  //         stagger: 0.1,
+  //       },
+  //       "-=0.5"
+  //     )
+  //     .from("button", {
+  //       scale: 0.8,
+  //       duration: 0.5,
+  //       ease: "back.out(1.7)",
+  //     })
+  //     .to(
+  //       nav,
+  //       {
+  //         autoAlpha: 1,
+  //         y: 0,
+  //         duration: 1,
+  //         ease: "bounce",
+  //       },
+  //       "-=0.3"
+  //     )
+  //     .to(mainContent, {
+  //       x: 0,
+  //       opacity: 1,
+  //       duration: 1,
+  //       stagger: {
+  //         amount: 0.5,
+  //         ease: "power2.out",
+  //       },
+  //     });
+  // }, []);
 
   function showProjectDescription(project) {
     setShowDescription(true);
@@ -311,6 +323,7 @@ export default function App() {
           ref={mainContentRef}
         >
           <About />
+          <Experiences />
           <Skills />
           <Projects setShowDescription={showProjectDescription} />
           <Contact />
@@ -324,7 +337,7 @@ export default function App() {
           <ul className="flex items-center py-1.5 text-sm rounded-lg shadow-md justify-evenly w-full bg-light-card sm:w-5/6">
             {navItems.map((navItem) => (
               <ScrollLink
-                offset={navItem.id === "Technologies" ? -120 : -70}
+                offset={navItem.id === "Technologies" ? -120 : -78}
                 smooth={true}
                 duration={500}
                 to={navItem.id}

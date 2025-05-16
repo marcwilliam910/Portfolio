@@ -10,6 +10,14 @@ const technologies = [
     name: "ReactJS",
   },
   {
+    icon: <SiNextdotjs />,
+    name: "NextJS",
+  },
+  {
+    name: "ExpressJS",
+    icon: <SiExpress />,
+  },
+  {
     icon: <BiLogoTypescript />,
     name: "TypeScript",
   },
@@ -25,21 +33,14 @@ const technologies = [
     icon: <RiFirebaseFill />,
     name: "Firebase",
   },
-  {
-    icon: <FaGitAlt />,
-    name: "Git",
-  },
-  {
-    icon: <SiNextdotjs />,
-    name: "NextJS",
-  },
-  {
-    name: "ExpressJS",
-    icon: <SiExpress />,
-  },
+
   {
     name: "Supabase",
     icon: <SiSupabase />,
+  },
+  {
+    icon: <FaGitAlt />,
+    name: "Git",
   },
 ];
 
