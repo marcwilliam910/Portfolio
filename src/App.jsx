@@ -125,62 +125,62 @@ export default function App() {
     };
   }, []);
 
-  // useGSAP(() => {
-  //   const main = mainRef.current;
-  //   const socialIcons = socialsRef.current.children;
-  //   const nav = navRef.current.children;
-  //   const mainContent = mainContentRef.current.children;
+  useGSAP(() => {
+    const main = mainRef.current;
+    const socialIcons = socialsRef.current.children;
+    const nav = navRef.current.children;
+    const mainContent = mainContentRef.current.children;
 
-  //   gsap.set([main.children, socialIcons, nav], {autoAlpha: 0, y: 50});
-  //   gsap.set(mainContent, {
-  //     x: 100,
-  //     opacity: 0,
-  //   });
+    gsap.set([main.children, socialIcons, nav], {autoAlpha: 0, y: 50});
+    gsap.set(mainContent, {
+      x: 100,
+      opacity: 0,
+    });
 
-  //   const tl = gsap.timeline({defaults: {ease: "power3.out"}});
+    const tl = gsap.timeline({defaults: {ease: "power3.out"}});
 
-  //   tl.to(main.children, {
-  //     autoAlpha: 1,
-  //     y: 0,
-  //     duration: 0.8,
-  //     stagger: 0.2,
-  //     delay: 1,
-  //   })
-  //     .to(
-  //       socialIcons,
-  //       {
-  //         autoAlpha: 1,
-  //         y: 0,
-  //         duration: 0.5,
-  //         stagger: 0.1,
-  //       },
-  //       "-=0.5"
-  //     )
-  //     .from("button", {
-  //       scale: 0.8,
-  //       duration: 0.5,
-  //       ease: "back.out(1.7)",
-  //     })
-  //     .to(
-  //       nav,
-  //       {
-  //         autoAlpha: 1,
-  //         y: 0,
-  //         duration: 1,
-  //         ease: "bounce",
-  //       },
-  //       "-=0.3"
-  //     )
-  //     .to(mainContent, {
-  //       x: 0,
-  //       opacity: 1,
-  //       duration: 1,
-  //       stagger: {
-  //         amount: 0.5,
-  //         ease: "power2.out",
-  //       },
-  //     });
-  // }, []);
+    tl.to(main.children, {
+      autoAlpha: 1,
+      y: 0,
+      duration: 0.8,
+      stagger: 0.2,
+      delay: 1,
+    })
+      .to(
+        socialIcons,
+        {
+          autoAlpha: 1,
+          y: 0,
+          duration: 0.5,
+          stagger: 0.1,
+        },
+        "-=0.5"
+      )
+      .from("button", {
+        scale: 0.8,
+        duration: 0.5,
+        ease: "back.out(1.7)",
+      })
+      .to(
+        nav,
+        {
+          autoAlpha: 1,
+          y: 0,
+          duration: 1,
+          ease: "bounce",
+        },
+        "-=0.3"
+      )
+      .to(mainContent, {
+        x: 0,
+        opacity: 1,
+        duration: 1,
+        stagger: {
+          amount: 0.5,
+          ease: "power2.out",
+        },
+      });
+  }, []);
 
   function showProjectDescription(project) {
     setShowDescription(true);

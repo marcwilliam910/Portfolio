@@ -2,7 +2,8 @@ import React from "react";
 import {FaReact, FaGitAlt} from "react-icons/fa";
 import {RiTailwindCssFill, RiFirebaseFill} from "react-icons/ri";
 import {BiLogoTypescript} from "react-icons/bi";
-import {SiMysql, SiSupabase, SiExpress, SiNextdotjs} from "react-icons/si";
+import {SiSupabase, SiExpress, SiNextdotjs, SiPrisma} from "react-icons/si";
+import {PiFileSqlDuotone} from "react-icons/pi";
 
 const technologies = [
   {
@@ -26,8 +27,8 @@ const technologies = [
     name: "Tailwind CSS",
   },
   {
-    icon: <SiMysql />,
-    name: "MySQL",
+    icon: <PiFileSqlDuotone />,
+    name: "SQL",
   },
   {
     icon: <RiFirebaseFill />,
@@ -41,6 +42,10 @@ const technologies = [
   {
     icon: <FaGitAlt />,
     name: "Git",
+  },
+  {
+    icon: <SiPrisma />,
+    name: "Prisma",
   },
 ];
 
